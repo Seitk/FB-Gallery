@@ -21,7 +21,7 @@
 @synthesize scrollView = _scrollView;
 @synthesize screenshot, currentPhoto, timelinePhoto;
 
-// TODO: Multiple photos, photo zooming, photo description, support for different kind of image
+// TODO: Multiple photos, photo zooming, photo description, support for remote image
 
 - (void)viewDidLoad
 {
@@ -58,7 +58,7 @@
     float newHeight = scaleRatio * currentPhoto.image.size.height;
     float originCenterY = currentPhoto.center.y;
         
-    [UIView animateWithDuration:kAnimationDuration*2 delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:kAnimationDuration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
         screenshot.alpha = 0.0;
         [self pushDownBgView:YES];
         [currentPhoto setFrame:CGRectMake(0, (self.view.frame.size.height + 20) / 2 - newHeight / 2, self.view.frame.size.width, newHeight)];
