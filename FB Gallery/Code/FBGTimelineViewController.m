@@ -36,6 +36,7 @@
     NSMutableArray *photos = [[NSMutableArray alloc] init];
     
     [photos addObject:[MWPhoto photoWithImage:[(UIImageView *)photo image]]];
+    [photos addObject:[MWPhoto photoWithImage:[UIImage imageNamed:@"5.jpg"]]];
     
     self.photos = photos;
     
