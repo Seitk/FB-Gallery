@@ -33,7 +33,7 @@
 		default:
 			break;
 	}
-    
+
 	[[self nextResponder] touchesEnded:touches withEvent:event];
 }
 
@@ -44,7 +44,7 @@
     float imgX = self.frame.origin.x + cellFrame.origin.x;
     float imgY = self.frame.origin.y + cellFrame.origin.y;
     
-    float positionYatModal = imgY - [(UIScrollView *)[self.window.subviews objectAtIndex:0] contentOffset].y;
+    float positionYatModal = imgY - [(UIScrollView *)[self firstAvailableUIViewController].view contentOffset].y;
     
     UIImageView *test = [[UIImageView alloc] initWithFrame:CGRectMake(imgX, positionYatModal, self.frame.size.width, self.frame.size.height)];
     test.image = self.image;
