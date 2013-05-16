@@ -3,12 +3,12 @@ FB-Gallery
   
 This project is an attempt to re-implement the experience of inaction from facebook timeline to photo browser and to figure out how the animations are done. I may not completely implement all features in it. The demo is to illustrate how can be done. 
 
+Update: 
+Use MWPhotoBrowser as image viewer (Sorry im lazy lol)
+
 TODO:  
 - Orientation handling
-- Multiple photos
-- Photo zooming
-- Photo description
-- Support remote image
+- FB-like Photo description
 
 Happy Coding!
   
