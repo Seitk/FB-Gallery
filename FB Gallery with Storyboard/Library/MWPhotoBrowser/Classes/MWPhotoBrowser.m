@@ -28,7 +28,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#define kAnimationDuration 0.2
+#define kAnimationDuration 0.3
 #define kBGpushBackRatio 0.92
 #define tagScreenshot 1000
 
@@ -354,6 +354,7 @@ navigationBarBackgroundImageLandscapePhone = _navigationBarBackgroundImageLandsc
     
     CGRect tempImgFrame = entranceImg.frame;
     tempImgFrame.origin.y += 20;
+    screenshot.alpha = 1.0;
     
     [UIView animateWithDuration:kAnimationDuration delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [tempImg setFrame:tempImgFrame];

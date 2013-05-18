@@ -46,10 +46,11 @@
     
     float positionYatModal = imgY - [(UIScrollView *)[self firstAvailableUIViewController].view contentOffset].y;
     
-    UIImageView *test = [[UIImageView alloc] initWithFrame:CGRectMake(imgX, positionYatModal, self.frame.size.width, self.frame.size.height)];
-    test.image = self.image;
+    UIImageView *selfCloneImg = [[UIImageView alloc] initWithFrame:CGRectMake(imgX, positionYatModal, self.frame.size.width, self.frame.size.height)];
+    selfCloneImg.image = self.image;
     
-    [[self firstAvailableUIViewController] performSelector:@selector(browsePhoto:) withObject:test];
+    NSArray *tempContainer = [NSArray arrayWithObjects:self, selfCloneImg, nil];
+    [[self firstAvailableUIViewController] performSelector:@selector(browsePhoto:) withObject:tempContainer];
 }
 
 

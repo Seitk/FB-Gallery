@@ -8,8 +8,6 @@
 
 #import "FBGTimelineViewController.h"
 #import "FBGTimelineCell.h"
-#import "FBGBrowsePhotoView.h"
-#import "FBGPhotoBrowserViewController.h"
 
 #import "MWPhotoBrowser.h"
 #import "MWTapDetectingImageView.h"
@@ -31,11 +29,13 @@
     [super viewDidLoad];
 }
 
-- (void) browsePhoto:(id)photo
+- (void) browsePhoto:(id)container
 {
+    UIImageView *photo = [container objectAtIndex:1];
+    
     NSMutableArray *photos = [[NSMutableArray alloc] init];
     
-    [photos addObject:[MWPhoto photoWithImage:[(UIImageView *)photo image]]];
+    [photos addObject:[MWPhoto photoWithImage:[photo image]]];
     [photos addObject:[MWPhoto photoWithImage:[UIImage imageNamed:@"5.jpg"]]];
     
     self.photos = photos;
@@ -44,15 +44,19 @@
     MWPhotoBrowser *browser = [[MWPhotoBrowser alloc] initWithDelegate:self];
     [browser setInitialPageIndex:0];
     browser.displayActionButton = YES;
-    browser.screenshot = [UIView screenshotForScreen];
     
-    UIImageView *tempImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [(UIImageView *)photo frame].size.width, [(UIImageView *)photo frame].size.height)];
+    // Hide tapped image from screenshot
+    [[container objectAtIndex:0] setHidden:YES];
+    browser.screenshot = [UIView screenshotForScreen];
+    [[container objectAtIndex:0] setHidden:NO];
+    
+    UIImageView *tempImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, [photo frame].size.width, [photo frame].size.height)];
     tempImg.contentMode = UIViewContentModeScaleAspectFill;
-    [tempImg setImage:[(UIImageView *)photo image]];
+    [tempImg setImage:[photo image]];
     browser.entranceImg = tempImg;
     browser.entranceImg.clipsToBounds = YES;
 
-    [browser.entranceImg setFrame:[(UIImageView *)photo frame]];
+    [browser.entranceImg setFrame:[photo frame]];
     
     [self presentViewController:browser animated:NO completion:nil];
 
