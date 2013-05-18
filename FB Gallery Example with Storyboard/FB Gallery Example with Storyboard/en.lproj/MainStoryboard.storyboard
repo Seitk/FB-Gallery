@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Hsx-za-rLt">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Timeline View Controller-->
+        <scene sceneID="fYg-d7-j5r">
+            <objects>
+                <tableViewController id="Hsx-za-rLt" customClass="PYTimelineViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Z6f-87-lg1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timelineCell" rowHeight="450" id="uBv-zT-g6e" customClass="FBGTimelineCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="450"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="449"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="To9-wO-O40">
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4V-e3-qIa">
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSY-bD-ADR">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="222" id="WW2-89-mdb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3 hours ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upJ-8r-JDL">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="DuT-8F-LAi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Status..status..status..status..status..status..status..status..status..status..status..status..status..status..status.." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="283" translatesAutoresizingMaskIntoConstraints="NO" id="0He-Y3-PIa">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="41" id="b04-lC-wQD"/>
+                                                        <constraint firstAttribute="width" constant="283" id="bVz-Cq-SQc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qn-xe-Jvk">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="SiN-he-DcP"/>
+                                                        <constraint firstAttribute="height" constant="21" id="Yvo-Zs-m4N"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Comment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTq-cr-oXF">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="74" id="x2m-3c-Yq6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Share" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfq-Rh-6nL">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="e3D-90-mte"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="8qn-xe-Jvk" firstAttribute="leading" secondItem="0He-Y3-PIa" secondAttribute="leading" type="default" id="3Id-tM-1VU"/>
+                                                <constraint firstAttribute="trailing" secondItem="c4V-e3-qIa" secondAttribute="trailing" constant="261" id="8jV-l2-trC"/>
+                                                <constraint firstItem="upJ-8r-JDL" firstAttribute="trailing" secondItem="dSY-bD-ADR" secondAttribute="trailing" type="default" id="9GX-Pq-k7f"/>
+                                                <constraint firstItem="dSY-bD-ADR" firstAttribute="leading" secondItem="upJ-8r-JDL" secondAttribute="leading" type="default" id="9tJ-YK-zyd"/>
+                                                <constraint firstItem="nTq-cr-oXF" firstAttribute="top" secondItem="8qn-xe-Jvk" secondAttribute="top" type="default" id="ClI-5T-0o9"/>
+                                                <constraint firstItem="c4V-e3-qIa" firstAttribute="top" secondItem="dSY-bD-ADR" secondAttribute="top" type="default" id="L8g-iN-VTg"/>
+                                                <constraint firstItem="Hfq-Rh-6nL" firstAttribute="trailing" secondItem="0He-Y3-PIa" secondAttribute="trailing" type="default" id="WKI-hn-wRz"/>
+                                                <constraint firstItem="nTq-cr-oXF" firstAttribute="baseline" secondItem="8qn-xe-Jvk" secondAttribute="baseline" type="default" id="XVK-gs-B0J"/>
+                                                <constraint firstItem="0He-Y3-PIa" firstAttribute="centerX" secondItem="nTq-cr-oXF" secondAttribute="centerX" type="default" id="aHD-FP-Jb7"/>
+                                                <constraint firstItem="0He-Y3-PIa" firstAttribute="top" secondItem="upJ-8r-JDL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="f8t-bA-chd"/>
+                                                <constraint firstItem="nTq-cr-oXF" firstAttribute="centerX" secondItem="To9-wO-O40" secondAttribute="centerX" type="default" id="hDy-S0-SYa"/>
+                                                <constraint firstItem="nTq-cr-oXF" firstAttribute="top" secondItem="Hfq-Rh-6nL" secondAttribute="top" type="default" id="iIT-fa-gCL"/>
+                                                <constraint firstItem="0He-Y3-PIa" firstAttribute="leading" secondItem="c4V-e3-qIa" secondAttribute="leading" type="default" id="k9H-ju-FgR"/>
+                                                <constraint firstItem="upJ-8r-JDL" firstAttribute="top" secondItem="To9-wO-O40" secondAttribute="top" constant="25" id="kfa-wy-3OD"/>
+                                                <constraint firstItem="dSY-bD-ADR" firstAttribute="leading" secondItem="To9-wO-O40" secondAttribute="leading" constant="45" id="kty-AX-dB7"/>
+                                                <constraint firstItem="Hfq-Rh-6nL" firstAttribute="baseline" secondItem="nTq-cr-oXF" secondAttribute="baseline" type="default" id="lI4-aL-JYU"/>
+                                                <constraint firstItem="c4V-e3-qIa" firstAttribute="top" secondItem="To9-wO-O40" secondAttribute="top" constant="9" id="mrA-UQ-y5X"/>
+                                                <constraint firstAttribute="bottom" secondItem="8qn-xe-Jvk" secondAttribute="bottom" constant="6" id="yma-km-Srm"/>
+                                                <constraint firstAttribute="bottom" secondItem="c4V-e3-qIa" secondAttribute="bottom" constant="401" id="ziR-pL-8KA"/>
+                                            </constraints>
+                                        </view>
+                                        <imageView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBt-rx-Fah" customClass="FBGTimelinePhotoView">
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="310" id="6NU-Fy-TjK"/>
+                                                <constraint firstAttribute="height" constant="310" id="ysC-a0-qmZ"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="UBt-rx-Fah" firstAttribute="top" secondItem="uBv-zT-g6e" secondAttribute="top" constant="102" id="2qV-f4-e1b"/>
+                                    <constraint firstItem="To9-wO-O40" firstAttribute="centerX" secondItem="UBt-rx-Fah" secondAttribute="centerX" type="default" id="BlR-hm-Olj"/>
+                                    <constraint firstItem="To9-wO-O40" firstAttribute="top" secondItem="uBv-zT-g6e" secondAttribute="top" constant="5" id="Hcd-P1-FUT"/>
+                                    <constraint firstItem="To9-wO-O40" firstAttribute="centerX" secondItem="uBv-zT-g6e" secondAttribute="centerX" type="default" id="VJC-iA-si8"/>
+                                    <constraint firstItem="To9-wO-O40" firstAttribute="centerY" secondItem="uBv-zT-g6e" secondAttribute="centerY" type="default" id="WZH-VX-ELG"/>
+                                    <constraint firstItem="To9-wO-O40" firstAttribute="leading" secondItem="uBv-zT-g6e" secondAttribute="leading" constant="10" id="XO2-e9-DQk"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cellContentView" destination="To9-wO-O40" id="gRg-gN-5ku"/>
+                                    <outlet property="photoView" destination="UBt-rx-Fah" id="wMN-Cu-Jdi"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hsx-za-rLt" id="kmc-uM-jAl"/>
+                            <outlet property="delegate" destination="Hsx-za-rLt" id="Dgg-Go-2GA"/>
+                        </connections>
+                    </tableView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ath-gc-ju9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="96"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FBGTimelineCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBGTimelineCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cellContentView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="photoView" candidateClass="FBGTimelinePhotoView"/>
+            </relationships>
+        </class>
+        <class className="FBGTimelinePhotoView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBGTimelinePhotoView.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PYTimelineViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PYTimelineViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
