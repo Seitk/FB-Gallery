@@ -9,7 +9,7 @@ Update:
 2013-05-18 Examples with Nib and storyboard  
 2013-05-16 Use MWPhotoBrowser as image viewer (Sorry im lazy lol)  
 
-[Video Demo](http://youtu.be/vt5fpE0bzSY)
+[Video Demo](http://youtu.be/PCU5Loxcj3s)
 
 TODO:  
 - Orientation handling
