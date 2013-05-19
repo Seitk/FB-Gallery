@@ -1,11 +1,15 @@
 FB-Gallery
 ==========
   
-This project is an attempt to re-implement the experience of inaction from facebook timeline to photo browser and to figure out how the animations are done. I may not completely implement all features in it. The demo is to illustrate how can be done. 
+This project is an attempt to re-implement the experience of inaction from facebook timeline to photo browser and to figure out how the animations are done. I may not completely implement all features in it. The demo is to illustrate how can be done.  
+The photo browser part is developed based on MWPhotoBrowser.  
 
 Update:  
-2013-05-18 Examples with Nib and storyboard
+2013-05-19 Add different handling for browsing another image in photo browser
+2013-05-18 Examples with Nib and storyboard  
 2013-05-16 Use MWPhotoBrowser as image viewer (Sorry im lazy lol)  
+
+[Video Demo](http://youtu.be/vt5fpE0bzSY)
 
 TODO:  
 - Orientation handling
