@@ -27,6 +27,23 @@
     }
 }
 
+- (float) traverseViewChainForView:(UIView *)view tillClass:(Class)class offset:(float)offset
+{    
+    if ([view.superview isKindOfClass:class])
+    {
+        return view.superview.frame.origin.y + offset;
+    } else if ([view.superview isKindOfClass:[UIView class]]) {
+        return [self traverseViewChainForView:view.superview tillClass:class offset:view.superview.frame.origin.y + offset];
+    } else {
+        return offset;
+    }
+}
+
+- (float) findViewOffsetTillViewClass:(Class)class
+{
+    return [self traverseViewChainForView:self tillClass:class offset:0];
+}
+
 + (UIImageView*)screenshotForScreen{
     UIView *view = [UIApplication sharedApplication].keyWindow;
     

@@ -11,7 +11,7 @@
 @interface UIView (viewController)
 
 - (UIViewController *) firstAvailableUIViewController;
-- (id) traverseResponderChainForUIViewController;
+- (float) findViewOffsetTillViewClass:(Class)class;
 + (UIImageView*)screenshotForScreen;
 + (UIImageView*)screenshotForView:(UIView*) view;
 

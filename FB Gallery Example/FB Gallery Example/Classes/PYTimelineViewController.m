@@ -42,6 +42,8 @@
     
     [photos addObject:[MWPhoto photoWithImage:[photo image]]];
     [photos addObject:[MWPhoto photoWithImage:[UIImage imageNamed:@"5.jpg"]]];
+
+    CGRect photoFrame = [photo frame];
     
     self.photos = photos;
     
@@ -61,6 +63,7 @@
     browser.entranceImg = tempImg;
     browser.entranceImg.clipsToBounds = YES;
     
+    photoFrame.origin.y += 20;
     [browser.entranceImg setFrame:[photo frame]];
     
     [self presentViewController:browser animated:NO completion:nil];

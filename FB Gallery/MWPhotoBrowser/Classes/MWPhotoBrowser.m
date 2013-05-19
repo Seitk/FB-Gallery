@@ -339,7 +339,7 @@ navigationBarBackgroundImageLandscapePhone = _navigationBarBackgroundImageLandsc
 }
 
 - (void) exitBrowserView:(UIImageView *)currentImg
-{
+{    
     // Clone current image and perform animation
     UIImageView *tempImg = [[UIImageView alloc] initWithFrame:currentImg.frame];
     tempImg.contentMode = UIViewContentModeScaleAspectFill;

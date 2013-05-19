@@ -45,6 +45,9 @@
     
     float positionYatModal = imgY - [(UIScrollView *)[self firstAvailableUIViewController].view contentOffset].y;
     
+    NSLog(@"a %f", [self findViewOffsetTillViewClass:[UITableView class]]);
+    NSLog(@"b %f", cellFrame.origin.y);
+    
     UIImageView *selfCloneImg = [[UIImageView alloc] initWithFrame:CGRectMake(imgX, positionYatModal, self.frame.size.width, self.frame.size.height)];
     selfCloneImg.image = self.image;
     
