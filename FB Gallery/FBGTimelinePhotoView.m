@@ -41,12 +41,9 @@
     CGRect cellFrame = self.superview.superview.frame;
     
     float imgX = self.frame.origin.x + cellFrame.origin.x;
-    float imgY = self.frame.origin.y + cellFrame.origin.y;
+    float imgY = self.frame.origin.y + [self findViewOffsetToSuperviewClass:[UITableView class]];
     
     float positionYatModal = imgY - [(UIScrollView *)[self firstAvailableUIViewController].view contentOffset].y;
-    
-    NSLog(@"a %f", [self findViewOffsetToSuperviewClass:[UITableView class]]);
-    NSLog(@"b %f", cellFrame.origin.y);
     
     UIImageView *selfCloneImg = [[UIImageView alloc] initWithFrame:CGRectMake(imgX, positionYatModal, self.frame.size.width, self.frame.size.height)];
     selfCloneImg.image = self.image;
