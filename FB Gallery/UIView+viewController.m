@@ -27,21 +27,28 @@
     }
 }
 
-- (float) traverseViewChainForView:(UIView *)view tillClass:(Class)class offset:(float)offset
+- (float) traverseViewChainForView:(UIView *)view toViewClass:(Class)class offset:(float)offset
 {    
     if ([view.superview isKindOfClass:class])
     {
         return view.superview.frame.origin.y + offset;
     } else if ([view.superview isKindOfClass:[UIView class]]) {
-        return [self traverseViewChainForView:view.superview tillClass:class offset:view.superview.frame.origin.y + offset];
+        return [self traverseViewChainForView:view.superview toViewClass:class offset:view.superview.frame.origin.y + offset];
     } else {
         return offset;
     }
 }
 
-- (float) findViewOffsetTillViewClass:(Class)class
+- (float) findViewOffsetToSuperviewClass:(Class)class
 {
-    return [self traverseViewChainForView:self tillClass:class offset:0];
+    return [self traverseViewChainForView:self toViewClass:class offset:0];
+}
+
+- (void) shiftViewPositionY:(float)offset
+{
+    CGRect tempFrame = self.frame;
+    tempFrame.origin.y += offset;
+    [self setFrame:tempFrame];
 }
 
 + (UIImageView*)screenshotForScreen{

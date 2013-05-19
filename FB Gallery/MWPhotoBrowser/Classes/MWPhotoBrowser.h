@@ -37,11 +37,10 @@
 
 // FB Photo Browser
 @property (nonatomic,strong) UIImageView *screenshot;
-@property (nonatomic) CGPoint entranceImgPt;
+@property (nonatomic,strong) UIView *screenshotView;
 @property (nonatomic,strong) UIImageView *entranceImg;
-@property (nonatomic,strong) UIImageView *fbtimelinePhoto;
-@property (nonatomic,strong) MWTapDetectingImageView *fbcurrentPhoto;
-
+@property (nonatomic,strong) UIView *entranceImgMask;
+- (void) setTransparentForScreenshot:(float)alpha;
 
 
 

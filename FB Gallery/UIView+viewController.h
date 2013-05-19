@@ -11,7 +11,8 @@
 @interface UIView (viewController)
 
 - (UIViewController *) firstAvailableUIViewController;
-- (float) findViewOffsetTillViewClass:(Class)class;
+- (float) findViewOffsetToSuperviewClass:(Class)class;
+- (void) shiftViewPositionY:(float)offset;
 + (UIImageView*)screenshotForScreen;
 + (UIImageView*)screenshotForView:(UIView*) view;
 

@@ -86,7 +86,7 @@
     
     float newAlpha = fabsf(dY) / (self.frame.size.height / 2);
     
-    [[(MWPhotoBrowser *)[self firstAvailableUIViewController] screenshot] setAlpha:newAlpha - 0.2];
+    [(MWPhotoBrowser *)[self firstAvailableUIViewController] setTransparentForScreenshot:newAlpha - 0.2];
     
     // Get new location to image
     frame.origin.y = newY;
