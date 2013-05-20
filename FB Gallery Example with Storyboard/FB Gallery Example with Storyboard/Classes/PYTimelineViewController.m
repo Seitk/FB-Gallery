@@ -62,7 +62,7 @@
     browser.entranceImg = tempImg;
     browser.entranceImg.clipsToBounds = YES;
     
-    photoFrame.origin.y += 20;
+//    photoFrame.origin.y += 20;
     [browser.entranceImg setFrame:photoFrame];
     
     [self presentViewController:browser animated:NO completion:nil];
