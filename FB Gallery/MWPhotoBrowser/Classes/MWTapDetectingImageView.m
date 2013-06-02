@@ -63,6 +63,12 @@
     dragging = YES;
     
     // Disable scrollview
+    if ([self.superview isKindOfClass:[MWZoomingScrollView class]])
+    {
+        [(MWZoomingScrollView *)self.superview setScrollEnabled:NO];
+    }
+        
+    
     if ([[self firstAvailableUIViewController] isKindOfClass:[MWPhotoBrowser class]])
     {
         [[(MWPhotoBrowser *)[self firstAvailableUIViewController] getPagingScrollView] setScrollEnabled:NO];
@@ -103,6 +109,11 @@
         dragging = NO;
         
         // Enable scrollview
+        if ([self.superview isKindOfClass:[MWZoomingScrollView class]])
+        {
+            [(MWZoomingScrollView *)self.superview setScrollEnabled:YES];
+        }
+        
         if ([[self firstAvailableUIViewController] isKindOfClass:[MWPhotoBrowser class]])
         {
             [[(MWPhotoBrowser *)[self firstAvailableUIViewController] getPagingScrollView] setScrollEnabled:YES];
