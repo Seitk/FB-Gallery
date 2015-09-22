@@ -82,7 +82,7 @@
     return 6;
 }
 
-- (float) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 450;
 }
@@ -100,7 +100,7 @@
         [cell initTimelineCell];
     }
     
-    UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", indexPath.row]];
+    UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"%ld.jpg", indexPath.row]];
     cell.photoView.image = img;
     
     return cell;
